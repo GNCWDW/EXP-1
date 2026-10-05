@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Form Validation</title>
+
+    <script>
+        function validateForm()
+        {
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+
+            // Email validation
+            var emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+            if (!emailPattern.test(email))
+            {
+                alert("Invalid email address. Please enter a valid email.");
+                return false;
+            }
+
+            // Phone number validation
+            var phonePattern = /^[0-9]{10}$/;
+
+            if (!phonePattern.test(phone))
+            {
+                alert("Phone number should contain exactly 10 digits.");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Form Validation</h1>
+
+    <form onsubmit="return validateForm()">
+
+        E-mail:
+        <input type="text" id="email" name="email">
+
+        <br><br>
+
+        Phone Number:
+        <input type="text" id="phone" name="phone">
+
+        <br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>
