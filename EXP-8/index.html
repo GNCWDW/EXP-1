@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<head>
+    <title>CSS Font and Background Demo</title>
+    <style>
+        /* General page styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            color: #222;
+            line-height: 1.7;
+            /* Background image for the complete page */
+            background-image: linear-gradient(rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.82)),
+                              url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .header {
+            max-width: 900px;
+            margin: 0 auto 24px;
+            padding: 20px;
+            text-align: center;
+            background-color: #fbe4d5;
+            border-radius: 10px;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #17365d;
+            font-family: Georgia, serif;
+            font-size: 2.2rem;
+        }
+
+        .header p {
+            margin-bottom: 0;
+            font-family: Verdana, sans-serif;
+            font-style: italic;
+            color: #555;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            margin-bottom: 22px;
+            padding: 20px 24px;
+            background-color: rgba(255, 255, 255, 0.94);
+            border-left: 6px solid #e89561;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #9a4d18;
+            font-family: Georgia, serif;
+        }
+
+        /* Different font families, styles, weights, and colors */
+        .normal {
+            font-family: Arial, sans-serif;
+            font-style: normal;
+            color: #222;
+        }
+
+        .italic {
+            font-family: Georgia, serif;
+            font-style: italic;
+            color: #176b55;
+        }
+
+        .bold {
+            font-family: Verdana, sans-serif;
+            font-weight: bold;
+            color: #174a8b;
+        }
+
+        .colored {
+            font-family: "Courier New", monospace;
+            font-size: 1.1rem;
+            color: #b42323;
+            text-decoration: underline;
+        }
+
+        /* Background image for one element on the page */
+        .element-background {
+            min-height: 260px;
+            margin-bottom: 22px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+                              url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1400&q=80");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .image-text {
+            color: white;
+            max-width: 650px;
+        }
+
+        .image-text h2 {
+            font-family: Georgia, serif;
+            font-size: 1.7rem;
+        }        
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+
+            .header h1 {
+                font-size: 1.7rem;
+            }
+
+            .card,
+            .element-background {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>CSS Practical</h1>
+        <p>Different Fonts, Text Styles, and Background Images</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>1. Different Font Styles</h2>
+            <p class="normal">This is normal text in Arial.</p>
+            <p class="italic">This is italic text in Georgia.</p>
+            <p class="bold">This is bold text in Verdana.</p>
+            <p class="colored">This text uses Courier New, a different color, and an underline.</p>
+        </section>
+
+        <section class="card">
+            <h2>2. Background Image for the Page</h2>
+            <p>The complete page uses a background image. A light overlay keeps the text easy to read.</p>
+        </section>
+
+        <section class="element-background">
+            <div class="image-text">
+                <h2>3. Background Image for One Element</h2>
+                <p>This section has a separate background image. A dark overlay makes the white text clear.</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

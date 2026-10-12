@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Lab: background-repeat and Links</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      margin: 20px;
+    }
+
+    h1 { color: darkblue; }
+    h2 { color: darkblue; }
+
+
+    /* ---------- 1) Control the image repetition: background-repeat ---------- */
+
+    /* Common style for the four demo boxes: a small 80x80 image */
+    .repeat-box {
+      background-image: url("https://picsum.photos/id/1043/80/80");
+      background-color: lightgray;
+      height: 200px;
+      border: 2px solid black;
+      margin-bottom: 10px;
+    }
+
+    .repeat-all { background-repeat: repeat; }      /* repeats left-right AND up-down (default) */
+    .repeat-x   { background-repeat: repeat-x; }    /* repeats only horizontally */
+    .repeat-y   { background-repeat: repeat-y; }    /* repeats only vertically */
+    .no-repeat  { background-repeat: no-repeat; }   /* shows the image only once */
+
+
+    /* ---------- 2) Styles for links ---------- */
+
+    /* Normal look for ALL links: black and underlined.
+       So a link only changes in the way we program it below. */
+    a:link, a:visited {
+      color: black;
+      text-decoration: underline;
+    }
+
+    /* a:link = a link that has NOT been visited yet (changes color to green) */
+    a.link-demo:link {
+      color: green;
+      font-weight: bold;
+    }
+
+    /* a:visited = a link that has ALREADY been visited
+       (changes color only after visiting, not on hover) */
+    a.visited-demo:visited {
+      color: purple;
+    }
+
+    /* a:hover = only while the mouse pointer is over the link */
+    a.hover-demo:hover {
+      color: red;
+      background-color: yellow;
+    }
+
+    /* a:active = only at the moment the link is clicked (mouse button held down) */
+    a.active-demo:active {
+      color: orange;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>CSS Lab</h1>
+
+  <h2>1) background-repeat</h2>
+  <p>The same small image is used in all four boxes below.</p>
+
+  <p>repeat (both directions):</p>
+  <div class="repeat-box repeat-all"></div>
+
+  <p>repeat-x (horizontal only):</p>
+  <div class="repeat-box repeat-x"></div>
+
+  <p>repeat-y (vertical only):</p>
+  <div class="repeat-box repeat-y"></div>
+
+  <p>no-repeat (only once):</p>
+  <div class="repeat-box no-repeat"></div>
+
+
+  <h2>2) Styles for links</h2>
+  <p>All links open in a new tab (target="_blank"). Each link below shows only ONE effect.</p>
+
+  <p><a class="link-demo" href="https://example.org" target="_blank">a:link - this link is green until you visit it</a></p>
+  <p><a class="visited-demo" href="https://example.com" target="_blank">a:visited - black now, turns purple only after you click it and come back</a></p>
+  <p><a class="hover-demo" href="###">a:hover - changes only while the mouse is over it</a></p>
+  <p><a class="active-demo" href="####">a:active - changes only while you press and hold the mouse button on it</a></p>
+
+</body>
+</html>
